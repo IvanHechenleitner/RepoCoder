@@ -1,0 +1,449 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+    box-sizing: border-box; 
+}
+
+/* menu nav */
+.navbar-brand{
+  max-width: 50px;
+  height: auto;
+}
+img, svg {
+  vertical-align: middle;
+  max-width: 200px;
+}
+.nav-link {
+  color: black;
+  font-weight: bold;
+  font-size: 25px;
+}
+.navbar-collapse {
+  flex-basis: 100%;
+  flex-grow: initial;
+  align-items: center;
+  margin: 10px;
+  font-size: 24px; 
+  position: relative;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+  
+}
+.navbar-collapse :hover rt {
+ transform: scale(1.1);
+}
+.navbar-collapse ::before {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+
+nav li:hover a {
+  transform: scale(1.1);
+}
+
+nav li::before {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+nav li:hover::before {
+  transform: scaleX(1);
+}
+
+/* main */
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1500px;
+}
+
+.container {
+  width: 80%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  grid-gap: 20px;
+  justify-items: center;
+  align-items: stretch; 
+}
+
+.item {
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.item:hover {
+  transform: scale(1.05);
+}
+
+.item img {
+  width: 100%; 
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.item h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.item p {
+  font-size: 16px;
+}
+
+.container h1 {
+  font-size: 36px; 
+  margin-bottom: 20px;
+}
+
+/* footer */
+.footer {
+  background-color: rgb(97, 97, 97);
+  color: #fff;
+  font-family: Oswald, sans-serif;
+  padding: 20px;
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__social h4 {
+  font-size: 24px;
+}
+
+.footer__social ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer__social li {
+  margin-bottom: 10px;
+  margin-right: 10px; 
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+  list-style-type: none; 
+}
+
+.footer__social li:last-child {
+  margin-right: 0; 
+}
+
+.footer__social li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer__social li:hover {
+  opacity: 1;
+}
+
+.footer__map {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.footer__map iframe {
+  width: 100%;
+  height: 200px;
+  border: 0;
+  border-radius: 10px;
+}
+
+
+  /*Marcas*/
+  
+  body, html {
+    height: 110%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .Marcas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 20px;
+    gap: 20px; 
+    height: 100%; 
+  }
+  
+  
+  .marca-section {
+    background-color: #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    opacity: 0; 
+    transform: translateY(20px); 
+    transition: transform 0.5s, transform 0.5s; 
+  }
+  /* Efecto de aparición */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .Marcas .marca-section:nth-child(1) {
+    animation: fadeIn 0.5s forwards;
+    animation-delay: 0.2s; 
+  }
+  
+  .Marcas .marca-section:nth-child(2) {
+    animation: fadeIn 0.5s forwards;
+    animation-delay: 0.4s; 
+  }
+  
+  .Marcas .marca-section:nth-child(3) {
+    animation: fadeIn 0.5s forwards;
+    animation-delay: 0.6s; 
+  }
+  
+  .marca-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .marca-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  
+  .Marcas h2, .Marcas h3 {
+    margin: 0;
+    text-align: center;
+  }
+  
+  .Marcas p {
+    margin-bottom: 20px;
+  }
+
+/*Catalogo*/
+body {
+  background-color: rgb(236, 236, 236);
+}
+.catalogo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.catalogo-section {
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.catalogo-section h3 {
+  margin-top: 0;
+}
+
+.cajas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.caja {
+  position: relative;
+  overflow: hidden;
+}
+
+.caja img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: opacity 0.3s;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+  border-radius: 10px;
+}
+
+.caja:hover .overlay {
+  opacity: 1;
+}
+
+.overlay button {
+  padding: 10px 20px;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  border-radius: 20px;
+  cursor: pointer;
+}
+/*Contacto */
+.contacto {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.banner {
+  position: relative;
+}
+.luminous-effect {
+  filter: brightness(150%);
+}
+
+.content-container {
+  flex: 5;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 190px;
+}
+
+.form-container {
+  width: 600px;
+  padding: 10px;
+  background-color: #f2f2f2;
+  border-radius: 30px;
+}
+
+.form-row {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+  transform: scale(1.05);
+}
+
+button[type="submit"],
+button[type="reset"] {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  border: none;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover,
+button[type="reset"]:hover {
+  background-color: #45a049;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.scroll-image {
+  width: 800px;
+  position: relative;
+  top: 20px;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.scroll-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+
+  /*Proximamente*/
+  .proximamente { 
+    background-color:rgb(97, 97, 97);
+    padding: 10px;
+    text-align: right;
+  }
+
+  .center {
+    display: flex;
+    justify-content: center;
+  }
