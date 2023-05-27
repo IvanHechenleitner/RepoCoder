@@ -6,11 +6,10 @@
     font-family: 'Oswald', sans-serif;
     box-sizing: border-box; 
 }
-
 /* menu nav */
-.navbar-brand{
-  max-width: 50px;
-  height: auto;
+.navbar-brand :hover {
+  transform:  scale(1.1);
+  transition: transform 0.3s ease;
 }
 img, svg {
   vertical-align: middle;
@@ -20,25 +19,34 @@ img, svg {
   color: black;
   font-weight: bold;
   font-size: 25px;
-}
-.navbar-collapse {
-  flex-basis: 100%;
-  flex-grow: initial;
-  align-items: center;
-  margin: 10px;
-  font-size: 24px; 
-  position: relative;
   text-decoration: none;
-  font-weight: bold;
-  transition: transform 0.3s ease;
-  
+  display: flex;
+  margin-right: 10px;
 }
-.navbar-collapse :hover rt {
- transform: scale(1.1);
+.navbar-nav {
+  margin-left: auto; /* Alinear los enlaces del navbar a la derecha */
 }
-.navbar-collapse ::before {
+.navbar-brand {
+  margin-right: auto; /* Alinear el logo a la izquierda */
+}
+.nav-link ::before { 
   content: "";
   position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(0, 0, 0);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  text-decoration: underline;
+}
+.navbar-nav .nav-link:hover {
+  border-bottom: 2px solid #8f3434 ; 
+}
+.navbar-menu ::before {
+  content: "";
+  position: relative;
   bottom: -4px;
   left: 0;
   width: 100%;
@@ -46,37 +54,30 @@ img, svg {
   background-color: black;
   transform: scaleX(0);
   transition: transform 0.3s ease;
-}
-
-
-nav li:hover a {
-  transform: scale(1.1);
-}
-
-nav li::before {
-  content: "";
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: white;
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
-}
-
-nav li:hover::before {
-  transform: scaleX(1);
-}
+} */
 
 /* main */
+body {
+  margin: 0;
+  padding: 0;
+}
 
 main {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  height: 1500px;
+  padding-top: 20px;
 }
+
+.carousel {
+  width: 100%;
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: auto;
+}
+
 
 .container {
   width: 80%;
@@ -109,19 +110,20 @@ main {
 
 .item img {
   width: 100%; 
-  height: auto;
+  height: 130px;
+  align-self: center;
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 10px;
 }
 
 .item h2 {
-  font-size: 24px;
+  font-size: 20px;
   margin-bottom: 10px;
 }
 
 .item p {
-  font-size: 16px;
+  font-size: 12px;
 }
 
 .container h1 {
@@ -129,59 +131,71 @@ main {
   margin-bottom: 20px;
 }
 
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* footer */
 .footer {
-  background-color: rgb(97, 97, 97);
-  color: #fff;
-  font-family: Oswald, sans-serif;
-  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #8f3434;
+  padding: 10px;
 }
 
 .footer__container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
 }
 
 .footer__social {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer__social h4 {
-  font-size: 24px;
-}
-
-.footer__social ul {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 20px 0 0;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
+
 .footer__social li {
-  margin-bottom: 10px;
-  margin-right: 10px; 
-  opacity: 0.7;
-  transition: opacity 0.3s ease;
-  list-style-type: none; 
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+  transition: transform 0.3s ease;
 }
 
-.footer__social li:last-child {
-  margin-right: 0; 
+.footer__social svg {
+  margin-right: 5px;
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
 }
 
-.footer__social li a {
-  color: #fff;
+.footer__social a {
   text-decoration: none;
+  color: #ffffff;
+}
+
+.footer__social a:hover {
+  color: #ffffff;
 }
 
 .footer__social li:hover {
-  opacity: 1;
+  transform: scale(1.2);
 }
 
+.footer__social li:hover svg {
+  transform: scale(1.2);
+}
 .footer__map {
   width: 100%;
   display: flex;
@@ -198,35 +212,114 @@ main {
   border-radius: 10px;
 }
 
+@media screen and (max-width: 480px) {
+  .footer {
+    flex-direction: column;
+  }
+  
+  .footer__social {
+    margin-top: 10px;
+  }
+  
+  .footer__social li {
+    margin: 5px;
+  }
+}
+
 
   /*Marcas*/
+  /* Estilos generales */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
   
-  body, html {
-    height: 110%;
-    margin: 0;
-    padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Estilos para la sección de marcas */
+.marcas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 10px;
+}
+.Marcas :hover { 
+  transform:  scale(1.0);
+  transition: transform 0.3s ease;
+}
+
+/* Estilos para cada marca */
+.marca-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+}
+
+.marca-info {
+  margin-bottom: 20px;
+ 
+}
+
+.marca-logo {
+  width: 100px;
+  height: 100px;
+  transform:  scale(1.2);
+  transition: transform 0.3s ease;
+}
+
+
+h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 0;
+
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+  .marcas {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
-  
-  .Marcas {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #f0f0f0;
-    padding: 20px;
-    gap: 20px; 
-    height: 100%; 
-  }
-  
-  
+
   .marca-section {
-    background-color: #ddd;
-    padding: 20px;
-    border-radius: 10px;
-    opacity: 0; 
-    transform: translateY(20px); 
-    transition: transform 0.5s, transform 0.5s; 
+    padding: 10px;
   }
-  /* Efecto de aparición */
+
+  .marca-logo {
+    width: 80px;
+    height: 80px;
+  }
+  .marca-logo :hover {
+    transform: scale(1.1);
+  }
+
+  h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+}
+  /*Efecto de aparición*/
   @keyframes fadeIn {
     0% {
       opacity: 0;
@@ -250,7 +343,7 @@ main {
   
   .Marcas .marca-section:nth-child(3) {
     animation: fadeIn 0.5s forwards;
-    animation-delay: 0.6s; 
+    animation-delay: 0.6s;  
   }
   
   .marca-info {
@@ -261,11 +354,12 @@ main {
   }
   
   .marca-logo {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
   }
   
+
   .Marcas h2, .Marcas h3 {
     margin: 0;
     text-align: center;
@@ -273,7 +367,7 @@ main {
   
   .Marcas p {
     margin-bottom: 20px;
-  }
+  } */
 
 /*Catalogo*/
 body {
