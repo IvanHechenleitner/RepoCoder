@@ -10,7 +10,7 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
       crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
-    <title>Proximamente</title>
+    <title>Vende tu Auto</title>
 </head>
 
 <body>
@@ -32,9 +32,9 @@
                 <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
                <a class="nav-link active" href="Marcas.html">Marcas</a>
                <a class="nav-link active" href="Catalogo.html">Catalogo</a>
+               <a class="nav-link active" href="Vendetuauto.html">Vende tu auto</a>
                <a class="nav-link active" href="Contacto.html">Contacto</a>
-               <a class="nav-link active" href="Proximamente.html">Proximamente</a>
-               
+              
               </div>
             </div>
           </div>
@@ -43,10 +43,68 @@
 
     </header>
     <main>
-            <section class="center">
-                <img src="../assets/Proximamente.png" alt="Proximamente">
-            </section>
-    </main>
+      <section class="catalog">
+        <h2>Queres ver tu auto?</h2>
+        <h3>Cargalo en nuestra red!</h3>
+        <div class="car-grid">
+          <div class="car-item">
+            <img src="../Assets/fordfiesta.jpg" alt="Auto 1">
+            <h3>Ford</h3>
+            <h3>Fiesta</h3>
+            <p>Precio: $XX,XXX</p>
+            <a href="#">Ver detalles</a>
+          </div>
+          <div class="car-item">
+            <img src="../Assets/bmwrojo.jpg" alt="Auto 2">
+            <h3>BMW</h3>
+            <h3>Series 4</h3>
+            <p>Precio: $XX,XXX</p>
+            <a href="#">Ver detalles</a>
+          </div>
+          <div class="car-item">
+            <img src="../Assets/sedan-deportivo-azul-estacionado-patio.jpg" alt="Auto 2">
+            <h3>BMW</h3>
+            <h3>Series 5</h3>
+            <p>Precio: $XX,XXX</p>
+            <a href="#">Ver detalles</a>
+          </div>
+        </div>
+      </section>
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-md-6 offset-md-3">
+            <form>
+              <div class="form-group">
+                <label for="modelo">Modelo</label>
+                <input type="text" class="form-control" id="modelo" placeholder="Ingrese el modelo">
+              </div>
+              <div class="form-group">
+                <label for="marca">Marca</label>
+                <input type="text" class="form-control" id="marca" placeholder="Ingrese la marca">
+              </div>
+              <div class="form-group">
+                <label for="anio">Año</label>
+                <input type="text" class="form-control" id="anio" placeholder="Ingrese el año">
+              </div>
+              <div class="form-group">
+                <label for="kilometros">Kilómetros</label>
+                <input type="number" class="form-control" id="kilometros" placeholder="Ingrese los kilómetros">
+              </div>
+              <div class="form-group">
+                <label for="kilometros">Contacto</label>
+                <input type="number" class="form-control" id="kilometros" placeholder="Dejanos tu numero">
+              </div>
+              <div class="form-group">
+                <label for="imagenes">Imágenes</label>
+                <input type="file" class="form-control-file" id="imagenes">
+              </div>
+              <button type="submit" class="btn btn-primary">Cargar auto</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
     <footer class="footer">
       <div class="footer__container">
         <h4>Encontranos</h4>

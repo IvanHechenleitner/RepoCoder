@@ -30,8 +30,8 @@
             <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
             <a class="nav-link active" href="Marcas.html">Marcas</a>
             <a class="nav-link active" href="Catalogo.html">Catalogo</a>
+            <a class="nav-link active" href="Vendetuauto.html">Vende tu auto</a>
             <a class="nav-link active" href="Contacto.html">Contacto</a>
-            <a class="nav-link active" href="Proximamente.html">Proximamente</a>
             
           </div>
         </div>
@@ -39,43 +39,39 @@
     </nav>
 </header>
 
-        <main>
-          <div class="banner">
-            <img src="../assets/Mecanico bmw.jpeg" alt="Banner Image">
-          </div>
+<main>
+  <div class="container-fluid">
+    <img src="../Assets/Mecanico bmw.jpeg" alt="Mecanico" class="img-fluid">
 
-          <div class="content-container">
-            <form class="form-container">
-              <div class="form-row">
-                <label for="Nombre">Nombre</label>
-                <input type="text" name="nombre" placeholder="Ingresa tu nombre">
-              </div>
-              <div class="form-row">
-                <label for="Apellido">Apellido</label>
-                <input type="text" placeholder="Ingresa tu apellido">
-              </div>
-              <div class="form-row">
-                <label for="Email">Email</label>
-                <input type="email" placeholder="Ingresa tu Email">
-              </div>
-              <div class="form-row">
-                <label for="Numero">Numero Celular</label>
-                <input type="number" placeholder="Ingresa tu Numero">
-              </div>
-              <div class="form-row">
-                <button type="submit">Enviar</button>
-                <button type="reset">Hacer de nuevo</button>
-              </div>
-              <div class="form-row">
-                <label for="mensaje">Mensaje</label>
-                <textarea name="mensaje" id="" cols="30" rows="10" placeholder="Deja tu mensaje"></textarea>
-              </div>
-            </form>
-            <div class="scroll-image">
-              <img src="../assets/Trabajacnosot.jpeg" alt="Scroll Image">
-            </div>
-          </div>
-        </main>
+    <h1 class="text-center my-4">Trabaja con nosotros</h1>
+
+    <form class="row g-3">
+      <div class="col-md-6">
+        <label for="inputNombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="inputNombre">
+      </div>
+      <div class="col-md-6">
+        <label for="inputApellido" class="form-label">Apellido</label>
+        <input type="text" class="form-control" id="inputApellido">
+      </div>
+      <div class="col-md-6">
+        <label for="inputEmail" class="form-label">Email</label>
+        <input type="email" class="form-control" id="inputEmail">
+      </div>
+      <div class="col-md-6">
+        <label for="inputTelefono" class="form-label">Teléfono</label>
+        <input type="text" class="form-control" id="inputTelefono">
+      </div>
+      <div class="col-12">
+        <label for="inputMensaje" class="form-label">Mensaje</label>
+        <textarea class="form-control" id="inputMensaje" rows="4"></textarea>
+      </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </div>
+    </form>
+  </div>
+</main>
           
         <footer class="footer">
           <div class="footer__container">
